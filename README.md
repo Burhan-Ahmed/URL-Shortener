@@ -12,4 +12,11 @@ Currently, two official plugins are available:
 - JS is a loosely typed language, meaning that we do not require to specify the variable type.
 - Use shift + alt + F to auto indent
 - Process to Publish
-- - dsa
+- - git init
+- - git remote add origin https://github.com/Burhan-Ahmed/Quiz-App.git
+- - git add .
+- - git config --global user.name "Burhan"   
+- - git config --global user.email "burhan.ahmed60090@gmail.com"
+- - git commit -m 'DONE'
+- - git pull origin main
+- - git push -u origin main
