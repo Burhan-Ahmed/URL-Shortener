@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <Main />
-            <div className='flex border border-black mx-28'>
+            <div className='flex mx-28'>
                 <Card title='For Developers' btn='Browse Jobs' />
                 <Card title='For Employers' btn='Add Job' />
             </div>

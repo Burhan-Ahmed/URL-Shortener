@@ -9,14 +9,14 @@ export default function JobCard() {
 
     return (
         <>
-            <div className=" mx-40 grid grid-cols-3 border border-black p-5 space-x-4 space-y-4">
-                {pair.map((work) =>
-                    <div className=' mx-auto w-fit p-10 space-y-2 rounded-xl border border-black'>
+            <div className=" mx-40 grid grid-cols-3 p-5 gap-10">
+                {pair.map((work, index) => (
+                    <div key={index} className=' p-10 space-y-2 rounded-xl border border-black'>
                         <p>{work.type} </p>
                         <h1 className=' font-bold text-2xl'> {work.title}  </h1>
                         <p>{work.description}</p>
                         <p>{work.salary}</p>
-                        <div className="flex justify-between border border-black">
+                        <div className="flex justify-between">
                             <p className="pt-1 flex">
                                 <div className="pt-0.5 pe-1">
                                     <CiLocationOn />
@@ -28,7 +28,7 @@ export default function JobCard() {
                             </button>
                         </div>
                     </div>
-                )}
+                ))}
             </div>
             <div className='flex justify-center'>
                 <button onClick={() => { setShow(~show) }} className=" px-72 py-2 border border-black my-10 rounded-3xl">
