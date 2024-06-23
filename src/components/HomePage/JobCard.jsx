@@ -1,12 +1,19 @@
-import jobs from "/src/jobs.json"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { CiLocationOn } from "react-icons/ci";
 
 
 export default function JobCard() {
     const [show, setShow] = useState(false)
+    const [jobs, setjobs] = useState([])
+    useEffect(() => {
+        const FetchJobs = async () => {
+            const res = await fetch('http://localhost:3001/Jobs')
+            const data = await res.json()
+            setjobs(data)
+        }
+        FetchJobs();
+    }, [])
     let pair = show ? jobs : jobs.slice(0, 3);
-
     return (
         <>
             <div className=" mx-40 grid grid-cols-3 p-5 gap-10">
