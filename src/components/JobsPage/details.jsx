@@ -1,14 +1,33 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
-import jobs from '/src/jobs.json';
+import { useState, useEffect } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { CiLocationOn } from 'react-icons/ci';
 
 export default function Details() {
-  const { id } = useParams();
-  const job = jobs.find((work) => work.id == parseInt(id));
+  const { id } = useParams(); 
+  const [jobs, setJob] = useState(null);
 
+  useEffect(() => {
+    const fetchJob = async () => {
+      try {
+        const res = await fetch(`http://localhost:3001/Jobs/${id}`);
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await res.json();
+        setJob(data);
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+    fetchJob();
+  }, [id]);
+
+  if (!jobs) {
+    return <div>Loading...</div>;
+  }
+  const job = jobs.find((work) => work.id == parseInt(id));
   return (
     <>
       <div className='font-bold text-2xl flex ps-20 mt-8'>
