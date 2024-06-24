@@ -5,8 +5,8 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { CiLocationOn } from 'react-icons/ci';
 
 export default function Details() {
-  const { id } = useParams(); 
-  const [jobs, setJob] = useState(null);
+  const { id } = useParams();
+  const [job, setJob] = useState(null);
 
   useEffect(() => {
     const fetchJob = async () => {
@@ -24,10 +24,10 @@ export default function Details() {
     fetchJob();
   }, [id]);
 
-  if (!jobs) {
+  if (!job) {
     return <div>Loading...</div>;
   }
-  const job = jobs.find((work) => work.id == parseInt(id));
+
   return (
     <>
       <div className='font-bold text-2xl flex ps-20 mt-8'>
