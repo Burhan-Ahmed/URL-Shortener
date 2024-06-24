@@ -1,10 +1,8 @@
-# React Jobs Website
-This is a Internship task done by me at Bytewise.
+# React + Vite
 
-# My Notes
-- Routes is like a container (parent) which is used to hold multiple route (child) inside of it.
-- Both are used in react-router-dom
-- Navlink and Link also work the same but Navlink provides with an additional attribute. (ActiveClass)
-- When you use flex then you should use space-x-5 or space-y-5 and when you use grid then you should use gap-5
-- Basically, this is because Tailwind CSS provides specific utility classes designed for different layout systems.
-- This Project also involves the Creation of custom API using `json-server`.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
