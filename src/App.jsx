@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Items from './components/Item'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
   return (
-    <>
-      <button className=' bg' onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
-    </>
+    <div >
+      <Items Product='Macbook Pro' Price='1000' />
+      <Items Product='OnePlus 9 Pro' Price='200' />
+      <Items Product='Samsung S21 Ultra' Price='800' />
+      <Items Product='Iphone 13' Price='450' />
+    </div>
   )
 }
-
-export default App
