@@ -1,6 +1,6 @@
 
 export default function Main() {
-    const backgroundImage = 'url(public/bg.jpg)'; // Replace with your image path
+    const backgroundImage = 'url(/bg.jpg)'; // Replace with your image path
 
     return (
         <section className=' py-36 border border-black text-center '
