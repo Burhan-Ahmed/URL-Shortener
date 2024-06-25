@@ -1,7 +1,9 @@
 import './App.css'
+import Cart from './components/cart'
 import Items from './components/Item'
 
 export default function App() {
+
 
   return (
     <div >
@@ -9,6 +11,7 @@ export default function App() {
       <Items Product='OnePlus 9 Pro' Price='200' />
       <Items Product='Samsung S21 Ultra' Price='800' />
       <Items Product='Iphone 13' Price='450' />
+      <Cart />
     </div>
   )
 }
