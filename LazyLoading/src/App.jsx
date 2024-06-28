@@ -1,29 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import About from './Components/about'
 import Product from './Components/products'
+import Home from './Components/home'
+import React from 'react'
 import './App.css'
+import { NavLink } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+const AboutPage = React.lazy(() => import('./Components/about'))
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
   return (
     <>
-    <div>
-      <About/>
-      <Product/>
-    </div>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+      <nav>
+        <ul>
+          <NavLink to={"/"}>
+            <li>
+              Home
+            </li>
+          </NavLink>
+          <NavLink to={"/Components/about.jsx"}>
+            <li>
+              About
+            </li>
+          </NavLink>
+          <NavLink to={"/Components/products.jsx"}>
+            <li>
+              Product
+            </li>
+          </NavLink>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Components/about.jsx' element={
+          <React.Suspense fallback='Page Loading...'>
+            <AboutPage />
+          </React.Suspense>
+        } />
+        <Route path='/Components/products.jsx' element={<Product />} />
+      </Routes>
     </>
   )
 }
 
-export default App
+
