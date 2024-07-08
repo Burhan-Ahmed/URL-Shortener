@@ -1,5 +1,6 @@
-# About Context APIs,UseMemo and UseCallback Hook
+# Redux-in-React
+Learning Task during my internship
 
-- This task help me to dive deep into the world of APIs
-- However, I learn that you can learn more by using these small concepts in Projects.
-- Both useMemo and useCallback are used for optimization
+# Concept
+- you can think of Redux as a global version of useState
+- Think of redux as usestate but instead it works globally? while useState needs to be used locally in each file. 
