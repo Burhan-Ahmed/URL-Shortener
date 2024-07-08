@@ -1,4 +1,18 @@
-
+export function increment() {
+    return {
+        type: 'inc'
+    }
+}
+export function decrement() {
+    return {
+        type: 'dec'
+    }
+}
+export function reset() {
+    return {
+        type: 'reset'
+    }
+}
 
 export function counterReducer(state = 0, action) {
     switch (action.type) {
@@ -7,7 +21,8 @@ export function counterReducer(state = 0, action) {
         case "dec":
             return state - 1;
         case "reset":
-            return state = 0;
-
+            return 0;
+        default:
+            return state;
     }
 }
