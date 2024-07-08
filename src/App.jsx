@@ -8,12 +8,12 @@ function App() {
 
   return (
     <div className='border-black border m-40 '>
-      <h1 className='font-semibold text-center '>Counter</h1>
+      <h1 className='font-semibold text-center mt-10'>Counter</h1>
       <div className='m-auto border border-black p-5 w-fit rounded-md text-black'>{count}</div>
-      <div className='w-fit  space-x-10 border border-black flex m-auto'>
-        <button onClick={() => dispatch(increment())}>Increment</button>
-        <button onClick={() => dispatch(reset())}>Reset</button>
-        <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <div className='mt-10 mb-10 w-fit  space-x-10  flex m-auto'>
+        <button className='pe-4 ps-4 pt-1 pb-1 rounded-lg bg-lime-300' onClick={() => dispatch(increment())}>Increment</button>
+        <button className='pe-4 ps-4 pt-1 pb-1 rounded-lg bg-blue-300' onClick={() => dispatch(reset())}>Reset</button>
+        <button className='pe-4 ps-4 pt-1 pb-1 rounded-lg bg-red-300' onClick={() => dispatch(decrement())}>Decrement</button>
       </div>
     </div>
   )
