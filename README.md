@@ -1,6 +1,8 @@
-# Redux-in-React
-Learning Task during my Internship
+## Point to Ponder
 
-# Concept
-- You can think of Redux as a global version of useState
-- Think of redux as usestate but instead it works globally? while useState needs to be used locally in each file. 
+- Sync(Blocking "writeFileSync") mean that everything is done step by step
+Async(Non-Blocking "writeFile") mean that everything is done without stoping the execution even if a function take more time to excute
+
+- The server indeed doesn't "request" in the traditional sense. Instead, it listens for incoming requests from clients.
+
+- .get mean to get data from some resource and .post mean to send data to some resource?
