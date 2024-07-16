@@ -7,7 +7,7 @@ A task for the leaning of ExpressJs during my internship
 - EJS (Embedded Javascript)
 
 ## Point to Ponder
-
+- Since I am working on backend and do not have a UI. Thus using ejs for Server-Side Rendering.
 - Sync(Blocking "writeFileSync") mean that everything is done step by step
 Async(Non-Blocking "writeFile") mean that everything is done without stoping the execution even if a function take more time to excute
 
