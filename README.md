@@ -1,3 +1,13 @@
+# User-Auth-App
+A task for the leaning of ExpressJs during my internship
+
+<hr>
+
+## Tools and Language Used
+- ExpressJs
+- Postman
+- EJS (Embedded Javascript)
+
 ## Point to Ponder
 
 - Sync(Blocking "writeFileSync") mean that everything is done step by step
