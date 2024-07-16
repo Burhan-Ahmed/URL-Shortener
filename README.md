@@ -1,8 +1,6 @@
 # User-Auth-App
 A task for the leaning of ExpressJs during my internship
 
-<hr>
-
 ## Tools and Language Used
 - ExpressJs
 - Postman
