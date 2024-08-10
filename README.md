@@ -1,5 +1,5 @@
 # URL-Shortener
-Done this task to learn about Mongo and Express during my Internship at Bytewise
+Done this task to learn about Mongo and Express during my Internship
 ![Alt text](./public/bg.PNG)
 
 ## Tools and Language Used
